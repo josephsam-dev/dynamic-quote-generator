@@ -34,7 +34,7 @@ h1 {
 }
 
 /* Button styles */
-#new-quote-btn {
+button {
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -43,8 +43,29 @@ h1 {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 5px 2px;
 }
 
-#new-quote-btn:hover {
+button:hover {
     background-color: #45a049;
+}
+
+/* Input styles */
+input[type="text"],
+input[type="file"] {
+    padding: 8px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 5px;
+    width: 70%;
+}
+
+/* JSON import/export section */
+.json-controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
