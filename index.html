@@ -1,33 +1,30 @@
-<link rel="stylesheet" href="style.css">
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dynamic Quote Generator</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Dynamic Quote Generator</h1>
+    <div class="container">
+        <h1>Dynamic Quote Generator</h1>
 
-  <!-- Display area -->
-  <div id="quoteDisplay">
-    <p id="quoteText">Click below to show a random quote</p>
-    <p id="quoteCategory"></p>
-  </div>
+        <div class="controls">
+            <label for="categoryFilter">Filter by Category:</label>
+            <select id="categoryFilter" onchange="filterQuotes()">
+                <option value="all">All Categories</option>
+            </select>
 
-  <!-- Button to show random quote -->
-  <button onclick="showRandomQuote()">Show Random Quote</button>
+            <h3>Add New Quote</h3>
+            <input type="text" id="quoteText" placeholder="Quote text">
+            <input type="text" id="quoteCategory" placeholder="Category">
+            <button onclick="handleAddQuote()">Add Quote</button>
+        </div>
 
-  <!-- Form to add a new quote -->
-  <div class="add-quote-form">
-    <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
-    <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
-    <button onclick="addQuote()">Add Quote</button>
-  </div>
+        <div id="quotesContainer" class="quotes-container"></div>
+    </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-<script src="script.js"></script>
